@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap");
+
+@layer base {
+  body {
+    @apply font-body text-black bg-white antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-rust text-white font-heading font-medium px-6 py-3 rounded-button
+           hover:bg-rust-deep transition-colors duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white font-heading font-medium px-6 py-3 rounded-button
+           hover:bg-clay transition-colors duration-200;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-black border border-black font-heading font-medium px-6 py-3 rounded-button
+           hover:bg-black hover:text-white transition-colors duration-200;
+  }
+
+  .tag {
+    @apply inline-block bg-sand text-rust font-body font-semibold text-body-sm
+           uppercase tracking-wider px-3 py-1 rounded-pill;
+  }
+
+  .tag-dark {
+    @apply inline-block bg-sand text-black font-body font-semibold text-body-sm
+           uppercase tracking-wider px-3 py-1 rounded-pill;
+  }
+
+  .card {
+    @apply bg-white rounded-card shadow-card hover:shadow-card-hover
+           transition-shadow duration-200;
+  }
+
+  .section-divider {
+    @apply border-t border-clay/30;
+  }
+
+  .accent-underline {
+    @apply border-b-[3px] border-rust pb-2;
+  }
+
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Portable Text Styles */
+  .portable-text h2 {
+    @apply text-h2 font-heading font-bold mt-12 mb-4;
+  }
+
+  .portable-text h3 {
+    @apply text-h3 font-heading font-semibold mt-8 mb-3;
+  }
+
+  .portable-text p {
+    @apply text-body-lg font-body mb-6 text-black/85 leading-relaxed;
+  }
+
+  .portable-text blockquote {
+    @apply border-l-4 border-rust pl-6 my-8 italic text-clay;
+  }
+
+  .portable-text strong {
+    @apply font-semibold text-black;
+  }
+
+  .portable-text img {
+    @apply rounded-card my-8;
+  }
+}
